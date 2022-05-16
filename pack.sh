@@ -26,8 +26,8 @@ yes | pacman -S discord
 useradd -m voron
 echo "voron:3947" | chpasswd
 echo "root:3947" | chpasswd
-echo "Voron ALL=(ALL:ALL) ALL" > /etc/sudoers
-echo "Defaults:Voron	!authenticate" > /etc/sudoers
+echo "voron ALL=(ALL:ALL) ALL" > /etc/sudoers
+echo "Defaults:voron	!authenticate" > /etc/sudoers
 
 #Installs and configures grub bootloader
 yes | pacman -S grub
