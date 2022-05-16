@@ -13,14 +13,12 @@ mkinitcpio -P
 #Installs shit I'll be using
 yes | pacman -Syu
 yes | pacman -S nano
-yes | pacman -S git
 yes | pacman -S alacritty
 yes | pacman -S iwd
 systemctl enable iwd
 yes | pacman -S dhcpcd
 yes | pacman -S sudo
-yes | pacman -S dolphin
-yes | pacman -S firefox
+printf "\n\n y\n" | pacman -S firefox
 yes | pacman -S discord
 
 #Creates account, changes passwords and configures sudoers
@@ -50,3 +48,4 @@ setxkbmap se
 
 #Reboots
 reboot
+
