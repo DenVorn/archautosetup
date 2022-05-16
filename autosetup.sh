@@ -17,5 +17,6 @@ mount --mkdir /dev/sda1 /mnt/boot
 pacstrap /mnt base linux-lts linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 
+chmod +x pack.sh
 cp pack.sh /mnt
-./pack.sh
+arch-chroot /mnt ./pack.sh
