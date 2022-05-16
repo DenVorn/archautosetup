@@ -14,6 +14,7 @@ mkinitcpio -P
 yes | pacman -Syu
 yes | pacman -S nano
 yes | pacman -S alacritty
+yes | pacman -S dolphin
 yes | pacman -S iwd
 systemctl enable iwd
 yes | pacman -S dhcpcd
