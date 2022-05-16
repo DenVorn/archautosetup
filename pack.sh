@@ -42,7 +42,7 @@ Xorg :0 -configure
 printf "\n\n\n\n\n y\n" | pacman -S plasma
 systemctl set-default graphical.target
 systemctl enable sddm
-setxkbmap sv
+setxkbmap se
 
 #Testing purposes only
 #systemctl enalbe dhcpcd@ens33
