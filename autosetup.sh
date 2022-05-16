@@ -3,9 +3,7 @@ loadkeys sv-latin1
 timedatectl set-ntp true
 
 #Creates the cluster
-printf "g\n n\n\n\n +1G\n t\n 1\n w\n" | fdisk /dev/sda
-printf "n\n\n\n +16G\n t\n\n 19\n w\n" | fdisk /dev/sda
-printf "n\n\n\n\n t\n\n 23\n w\n" | fdisk /dev/sda
+printf "g\n n\n\n\n +1G\n t\n 1\n n\n\n\n +16G\n t\n\n 19\n n\n\n\n\n t\n\n 23\n w\n" | fdisk /dev/sda
 
 #Formats the cluster
 mkfs.ext4 /dev/sda3
