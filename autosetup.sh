@@ -10,13 +10,12 @@ mkswap /dev/sda2
 mkfs.fat -F 32 /dev/sda1
 
 mount /dev/sda3 /mnt
-mount --mkdir /dev/sda1 /mnt/boot
 swapon /dev/sda2
+mount --mkdir /dev/sda1 /mnt/boot
+
 
 pacstrap /mnt base linux-lts linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt
 
-mount --mkdir /dev/sdb1 /hey
-cd /hey/hey
+cp pack.sh /mnt
 ./pack.sh
