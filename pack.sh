@@ -19,6 +19,7 @@ yes | pacman -S iwd
 systemctl enable iwd
 yes | pacman -S dhcpcd
 yes | pacman -S sudo
+yes | pacman -S dolphin
 yes | pacman -S firefox
 yes | pacman -S discord
 
