@@ -1,4 +1,4 @@
-arch-chroot /mnt
+
 
 #phase 1
 ln -sf /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
