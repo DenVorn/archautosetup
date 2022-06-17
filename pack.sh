@@ -19,7 +19,6 @@ yes | pacman -S iwd
 systemctl enable iwd
 yes | pacman -S dhcpcd
 yes | pacman -S sudo
-printf "\n\n y\n" | pacman -S firefox
 yes | pacman -S discord
 
 #Creates account, changes passwords and configures sudoers
