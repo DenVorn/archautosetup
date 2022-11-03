@@ -1,4 +1,4 @@
 # Might be outdated
 
 # Description
-Just some script to automate the install and configuration of Arch Linux
+Just a script to automate the install and configuration of Arch Linux
