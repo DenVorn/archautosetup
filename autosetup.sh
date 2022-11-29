@@ -2,7 +2,7 @@
 loadkeys sv-latin1
 timedatectl set-ntp true
 
-#Creates the cluster 4GB on efi, 16GB on swap, and everthing else on root
+#Creates the cluster 4GB on efi, 16GB on swap, and remaining on root
 printf "g\n n\n\n\n +4G\n t\n 1\n n\n\n\n +16G\n t\n\n 19\n n\n\n\n\n t\n\n 23\n w\n" | fdisk /dev/sda
 
 #Formats the cluster
