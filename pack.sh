@@ -5,7 +5,7 @@ echo "en_GB.UTF-8 UTF-8" > /etc/locale.gen
 locale-gen
 echo "LANG=en_GB.UTF-8" > /etc/locale.conf
 echo "KEYMAP=se-latin1" > /etc/vconsole.conf
-echo "127.0.0.1 localhost" > /etc/hostname
+echo "Vorn" > /etc/hostname
 
 #Compiles recent changes
 mkinitcpio -P
@@ -47,5 +47,5 @@ systemctl set-default graphical.target
 setxkbmap se
 
 #Testing purposes only
-#systemctl enalbe dhcpcd@ens33
+systemctl enable dhcpcd@ens33
 
