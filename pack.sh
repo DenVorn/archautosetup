@@ -36,6 +36,13 @@ grub-mkconfig -o /boot/grub/grub.cfg
 printf "\n y\n" | pacman -S xorg
 yes | pacman -S nvidia
 Xorg :0 -configure
+printf "\n y\n" | pacman -S awesome
+printf "\n y\n" | pacman -S sddm
+systemctl enable sddm
+mkdir /etc/sddm.conf.d/
+echo "[Autologin]
+User=worn
+Session=awesome" > /etc/sddm.conf.d/autologin.conf
 systemctl set-default graphical.target
 setxkbmap se
 
