@@ -13,8 +13,6 @@ mkinitcpio -P
 #Installs shit I'll be using
 yes | pacman -Syu
 yes | pacman -S nano
-yes | pacman -S alacritty
-yes | pacman -S dolphin
 yes | pacman -S iwd
 systemctl enable iwd
 yes | pacman -S dhcpcd
@@ -34,18 +32,13 @@ yes | pacman -S efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
-#Installs and configures the graphics and Desktop enviroment
+#Installs and configures the graphics
 printf "\n y\n" | pacman -S xorg
 yes | pacman -S nvidia
 Xorg :0 -configure
-printf "\n\n\n\n\n y\n" | pacman -S plasma
 systemctl set-default graphical.target
-systemctl enable sddm
 setxkbmap se
 
 #Testing purposes only
 #systemctl enalbe dhcpcd@ens33
-
-#Reboots
-reboot
 
